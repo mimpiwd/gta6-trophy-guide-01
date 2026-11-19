@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap to the platinum, missable flags, and a sourced guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div>
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">All 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a sourced guide for each one, a roadmap to the platinum, and a checklist that remembers your progress. No online trophies. About 200 hours to the platinum, difficulty 4/10 (PowerPyx).</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-count" id="progressCount">0 of 55 earned</p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-detail" id="progressDetail">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-kind" id="progressKind">Story 0/17 &middot; Activities 0/31 &middot; Collectibles 0/6</p>
+  </div>
+</header>
+
+<section class="warning" id="missableWarning">
+  <h2>&#9888; The one trophy you can miss</h2>
+  <p><strong>Positive Mental Attitude</strong> (meditate at every spot) is the only potentially missable trophy. In <strong>Chapter 1</strong>, after the mission <em>Down to Earth</em>, talk to Lucia in the kitchen in the morning, follow her to the balcony and choose <strong>Accept</strong>. It becomes unavailable after Chapter 1 — so do it before the chapter ends and keep a manual save from Chapter 1. Every other trophy can be earned after the story in free-roam.</p>
+</section>
+
+<section class="roadmap" id="roadmapSection" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="section-note">Four stages, in order. Built from the official descriptions and the PowerPyx roadmap.</p>
+  <ol class="stages" id="roadmapStages"></ol>
+</section>
+
+<main class="layout">
+  <div class="list-col">
+    <section class="controls" aria-label="Tracker controls">
+      <div class="mini-progress"><span id="miniProgressCount">0 of 55 earned</span><div class="bar mini"><span id="miniProgressFill"></span></div></div>
+      <div class="control-row">
+        <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or guide text…" autocomplete="off"></label>
+        <label class="select-label">Grade
+          <select id="gradeFilter">
+            <option value="all">All grades</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+      </div>
+      <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip active" data-kind="all">All kinds</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="platinum">Platinum</button>
+        <button type="button" class="chip" data-kind="online">Online</button>
+      </div>
+      <div class="toggle-row">
+        <label class="toggle"><input type="checkbox" id="missableOnly"> Missable only</label>
+        <label class="toggle"><input type="checkbox" id="earnedOnly"> Earned only</label>
+        <label class="toggle"><input type="checkbox" id="spoilerToggle" checked> Spoiler-safe: hide story names until earned</label>
+      </div>
+      <div class="action-row">
+        <button type="button" id="exportBtn">Export progress</button>
+        <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+        <button type="button" id="resetBtn">Reset progress</button>
+        <span class="status" id="statusLine" role="status"></span>
+      </div>
+      <p class="count-line" id="countLine"></p>
+    </section>
+
+    <section aria-label="Trophy checklist">
+      <ul class="trophy-list" id="trophyList"></ul>
+      <p class="empty" id="emptyNote" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+    </section>
+  </div>
+
+  <aside class="detail" id="detailPanel" aria-label="Selected trophy guide">
+    <h2>Selected trophy</h2>
+    <p class="detail-hint">Tap any trophy in the list to read its full guide here, with its source.</p>
+    <div id="detailBody"></div>
+  </aside>
+</main>
+
+<footer>
+  <h2>About this guide</h2>
+  <p>Written 19 November 2026, the day after Grand Theft Auto VI launched, in the author's own words. Names, descriptions and grades are the official PlayStation 5 list as carried by PSNProfiles and Exophase. The main guide source is the <strong>PowerPyx GTA 6 Trophy Guide &amp; Roadmap</strong> (powerpyx.com, 18–19 Nov 2026); every trophy names its source beside its guide. Three trophies — <em>In The Beginning…</em>, <em>Bad Luck, I Guess</em> and <em>Ten Pin</em> — were still unconfirmed by every guide on that date, and their guides say so honestly instead of inventing a method. This guide works fully offline: it loads nothing from the network, and it uses no Rockstar logo, artwork or game screenshots.</p>
+  <p>Progress is saved in your browser (localStorage) and never leaves your device unless you export it yourself.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
