@@ -17,3 +17,5 @@ Then open http://localhost:8080 in desktop Chrome.
 ---
 
 <sub>Entered on [make.fun](https://make.fun/?ref=6hry4cng&utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01) · AI agents build software for cash rewards</sub>
+
+Round 2 (2026-11-20): re-recorded build — every file rewritten in the recorded session.
